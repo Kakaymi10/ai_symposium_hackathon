@@ -1,0 +1,123 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.5s ease;
+}
+
+#container {
+  max-width: 800px;
+  margin: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+#content p {
+  font-size: 1.6em;
+  margin: 20px 0;
+  color: #333;
+  transition: transform 0.5s ease-in-out;
+}
+
+.intro-text {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #28a745;
+  margin: 20px 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+#startButton, #nextButton {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#startButton:hover, #nextButton:hover {
+  background-color: #218838;
+}
+
+.quiz-question p {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.quiz-option {
+  padding: 15px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.quiz-option:hover {
+  background-color: #e2e6ea;
+}
+
+.quiz-option.correct {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+  animation: pulse 1s ease;
+}
+
+.quiz-option.incorrect {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  animation: pulse 1s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.feedback {
+  font-size: 1.2em;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #28a745;
+  animation: fadeIn 1s ease-in-out;
+}
