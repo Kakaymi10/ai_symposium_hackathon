@@ -1,6 +1,5 @@
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.message === "get_page_content") {
-    const content = document.body.innerText;
-    sendResponse(content);
+chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  if (request.method === "getText") {
+    sendResponse({ data: document.body.innerText, method: "getText" });
   }
 });

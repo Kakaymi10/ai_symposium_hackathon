@@ -1,15 +1,11 @@
 {
-  "manifest_version": 3,
-  "name": "Voice Chat Bot Quiz Generator",
+  "manifest_version": 2,
+  "name": "Text Reader Extension",
   "version": "1.0",
-  "description": "Generates quizzes from the current tab content using GPT API",
-  "permissions": ["activeTab", "scripting"],
-  "background": {
-    "service_worker": "background.js"
-  },
-  "action": {
-    "default_popup": "index.html",
-    "default_icon": {}
+  "description": "Reads and displays the text of the current tab",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_popup": "index.html"
   },
   "content_scripts": [
     {
