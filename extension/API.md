@@ -19,9 +19,16 @@ const Test = new LangflowClient(
         (message) => console.log("Stream Closed:", message), // onClose callback
         (error) => setError(`Stream Error: ${error}`) // onError callback
       );`
+````
 
 # Response
 
 The response is sorted here
-```bash response.outputs[0].outputs[0].outputs.message.text```s
-````
+
+```bash
+response.outputs[0].outputs[0].outputs.message.text
+```
+
+```
+
+```

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 class LangflowClient {
   constructor(baseURL, apiKey) {
     this.baseURL = baseURL;
@@ -103,6 +104,7 @@ async function main() {
     "TextInput-aE1Ut": {},
     "TextInput-QnkWw": {},
   };
+  // eslint-disable-next-line no-undef
   response = await langflowClient.runFlow(
     flowIdOrName,
     inputValue,
@@ -122,3 +124,9 @@ async function main() {
 }
 
 main();
+
+const Test = new LangflowClient("http://127.0.0.1:7860/api/v1/run", "key");
+
+console.log(Test);
+
+const response = await langflowClient.runFlow();
